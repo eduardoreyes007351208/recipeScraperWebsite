@@ -4,16 +4,22 @@ import { useState } from 'react'
 
 function App() {
   const [recipeURL, setRecipeURL] = useState('')
-  
   const params = new URLSearchParams({
     url: recipeURL,
   })
+  let apiURL = `https://recipescraper-zs61.onrender.com/get_pdf?${params}`
   let localURL = `http://127.0.0.1:8000/get_pdf?${params}`
-  
-  const getPDF = (event) => {
+
+  const getPDF = async (event) => {
     event.preventDefault()
-    console.log(recipeURL)
-    console.log(localURL)
+    try {
+      const res = await fetch(apiURL);
+      const blob = res.blob()
+      
+    } catch (err) {
+      console.error('Error fetching PDF: ', err
+      )
+    }
     setRecipeURL('')
   }
 
