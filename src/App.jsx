@@ -40,8 +40,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Recipe PDF Generator</h1>
+      <div id="apiContainer">
+        <h3>Enter URL to search for recipe</h3>
         <form onSubmit={getPDF}>
           <input
             value={recipeURL}
