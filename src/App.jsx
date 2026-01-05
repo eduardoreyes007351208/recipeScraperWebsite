@@ -10,6 +10,10 @@ function App() {
     <>
       <div>
         <h1>Recipe PDF Generator</h1>
+        <form action="submit">
+          <input type="text" />
+          <button></button>
+        </form>
       </div>
     </>
   )
