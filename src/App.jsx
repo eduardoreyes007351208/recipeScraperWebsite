@@ -42,14 +42,15 @@ function App() {
     <>
       <div id="apiContainer">
         <h3>Enter URL to search for recipe</h3>
-        <form onSubmit={getPDF}>
+        <form id="inputForm" onSubmit={getPDF}>
           <input
+            className="inputField"
             value={recipeURL}
             type="text"
             onChange={(e) => setRecipeURL(e.target.value)}
             placeholder="Enter URL"
           />
-          <button type="submit">Search</button>
+          <button className="button" type="submit">Search</button>
         </form>
       </div>
     </>
