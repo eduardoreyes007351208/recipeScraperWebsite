@@ -4,8 +4,12 @@ import { useState } from 'react'
 
 function App() {
   const [recipeURL, setRecipeURL] = useState('')
-  let localURL = `http://127.0.0.1:8000/get_pdf?url=${recipeURL}`
-
+  
+  const params = new URLSearchParams({
+    url: recipeURL,
+  })
+  let localURL = `http://127.0.0.1:8000/get_pdf?${params}`
+  
   const getPDF = (event) => {
     event.preventDefault()
     console.log(recipeURL)
