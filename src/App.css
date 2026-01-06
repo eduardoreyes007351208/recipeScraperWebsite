@@ -44,7 +44,7 @@
 
 #apiContainer {
   height: 50vh;
-  width: 100vh;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
