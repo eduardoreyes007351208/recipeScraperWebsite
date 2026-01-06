@@ -8,9 +8,11 @@ import Instructions from './components/Instructions.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
-    <App />
-    <Instructions />
-    <Footer />
+    <div id='mainDiv'>
+      <Header />
+      <App />
+      <Instructions />
+      <Footer />
+    </div>
   </StrictMode>,
 )

@@ -69,6 +69,9 @@ button:focus-visible {
   }
 }
 
-#root {
-  margin: 0px;
+#mainDiv {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #535bf2;
 }
