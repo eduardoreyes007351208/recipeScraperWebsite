@@ -72,6 +72,7 @@ button:focus-visible {
 }
 
 #mainDiv {
+  height: 70vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
