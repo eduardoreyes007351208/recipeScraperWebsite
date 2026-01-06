@@ -10,7 +10,7 @@
 }
 
 #apiContainer {
-  height: 50vh;
+  height: 30vh;
   width: 60%;
   display: flex;
   flex-direction: column;
