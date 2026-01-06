@@ -1,9 +1,16 @@
 #root {
   text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#213547, #535bf2, #213547);
 }
 
 #apiContainer {
-  height: 30vh;
+  height: 50vh;
   width: 60%;
   display: flex;
   flex-direction: column;

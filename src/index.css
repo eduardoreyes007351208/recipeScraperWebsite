@@ -70,12 +70,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-#mainDiv {
-  height: 70vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #535bf2;
-}

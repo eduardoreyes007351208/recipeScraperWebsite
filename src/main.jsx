@@ -1,18 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import Instructions from './components/Instructions.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Instructions from "./components/Instructions.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div id='mainDiv'>
-      <Header />
-      <App />
-      <Instructions />
-      <Footer />
-    </div>
-  </StrictMode>,
-)
+    <Header />
+    <App />
+    <Instructions />
+    <Footer />
+  </StrictMode>
+);
