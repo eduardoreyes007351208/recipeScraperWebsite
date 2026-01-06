@@ -1,8 +1,9 @@
 import React from 'react'
+import './Instructions.css';
 
 const Instructions = () => {
   return (
-    <div>
+    <div id='instructDiv'>
       <h3>Instructions</h3>
       <ol>
         <li className='instructionItem'>Copy the link for the website you want to get the recipe from.</li>
