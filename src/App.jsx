@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function App() {
   const [recipeURL, setRecipeURL] = useState("");
+  const [loading, setLoading] = useState(false);
   const params = new URLSearchParams({
     url: recipeURL,
   });
@@ -13,6 +14,7 @@ function App() {
     event.preventDefault();
     try {
       const res = await fetch(apiURL);
+      setLoading = true;
       const blob = await res.blob();
 
       const contentDisposition = res.headers.get("Content-Disposition");
@@ -30,6 +32,8 @@ function App() {
       a.download = fileName;
       a.click()
       URL.revokeObjectURL(pdfURL)
+
+      setLoading(false)
 
 
     } catch (err) {
@@ -50,7 +54,9 @@ function App() {
             onChange={(e) => setRecipeURL(e.target.value)}
             placeholder="Enter URL"
           />
-          <button className="button" type="submit">Search</button>
+          <button className="button" type="submit">
+            {loading ? 'Searching for Recipe... ' : 'Search'}
+          </button>
         </form>
       </div>
     </>
