@@ -4,7 +4,7 @@ import './Instructions.css';
 const Instructions = () => {
   return (
     <div id='instructDiv'>
-      <h3>Instructions</h3>
+      <h2 className='heading2'>Instructions</h2>
       <ol>
         <li className='instructionItem'>Copy the link for the website you want to get the recipe from.</li>
         <li className='instructionItem'>Paste it into the search bar and click button.</li>
