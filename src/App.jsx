@@ -3,7 +3,8 @@ import { useState } from "react";
 
 function App() {
   const [recipeURL, setRecipeURL] = useState("");
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
+  
   const params = new URLSearchParams({
     url: recipeURL,
   });
@@ -14,7 +15,7 @@ function App() {
     event.preventDefault();
     try {
       const res = await fetch(apiURL);
-      setLoading = true;
+      //setLoading = true;
       const blob = await res.blob();
 
       const contentDisposition = res.headers.get("Content-Disposition");
@@ -55,7 +56,8 @@ function App() {
             placeholder="Enter URL"
           />
           <button className="button" type="submit">
-            {loading ? 'Searching for Recipe... ' : 'Search'}
+            {/* {loading ? 'Searching for Recipe... ' : 'Search'} */}
+            Search
           </button>
         </form>
       </div>
