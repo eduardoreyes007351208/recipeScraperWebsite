@@ -4,6 +4,7 @@ import { useState } from "react";
 function App() {
   const [recipeURL, setRecipeURL] = useState("");
   const [loading, setLoading] = useState(false);
+  const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   console.log(loading)
   
   const params = new URLSearchParams({
@@ -18,6 +19,9 @@ function App() {
     try {
       setLoading(true)
       console.log(loading)
+
+      await sleep(1000)
+
       const res = await fetch(apiURL);
       
       const blob = await res.blob();
