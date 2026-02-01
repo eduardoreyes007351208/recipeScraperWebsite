@@ -1,9 +1,11 @@
 import "./App.css";
 import { useState } from "react";
+import Error from "./components/Error";
 
 function App() {
   const [recipeURL, setRecipeURL] = useState("");
   const [loading, setLoading] = useState(false);
+  const [errorStatus, setErrorStatus] = useState(false);
   const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
   console.log(loading)
   
@@ -45,10 +47,13 @@ function App() {
       URL.revokeObjectURL(pdfURL)
 
       setLoading(false)
+      setErrorStatus(false)
 
 
     } catch (err) {
       console.error("Error fetching PDF: ", err);
+      setLoading(false)
+      setErrorStatus(true)
     }
     setRecipeURL("");
   };
@@ -70,6 +75,7 @@ function App() {
             
           </button>
         </form>
+        {errorStatus ? <Error/> : <div/>}
       </div>
     </>
   );
