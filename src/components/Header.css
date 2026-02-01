@@ -2,4 +2,11 @@
     box-sizing: border-box;
     height: 15vw;
     padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+h1, h4 {
+    margin: 0px;
 }

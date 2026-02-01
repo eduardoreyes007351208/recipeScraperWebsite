@@ -4,7 +4,8 @@ import './Header.css'
 const Header = () => {
   return (
     <div id='headerDiv'>
-        <h1>Recipe Scraper PDF Generator</h1>
+        <h1>Meal2Print</h1>
+        <h4>Recipe to PDF Generator</h4>
     </div>
   )
 }
