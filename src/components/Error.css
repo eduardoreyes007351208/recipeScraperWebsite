@@ -1,0 +1,10 @@
+#errorMessageContainer {
+    background-color: #CE2029;
+    border-radius: 15px;
+    padding: 32px 0px;
+    margin: 32px 0px;
+}
+.errorHeading2, .errorHeading4 {
+    margin: 0px;
+    padding: 0px;
+}

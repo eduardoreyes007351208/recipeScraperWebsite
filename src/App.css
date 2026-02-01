@@ -10,11 +10,12 @@
 }
 
 #apiContainer {
-  height: 30vh;
+  max-height: 40vh;
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 32px;
 }
 
 #inputForm {
@@ -32,7 +33,7 @@
   font-size: 18px;
   box-sizing: border-box;
   padding-left: 16px;
-   border-radius: 8px;
+  border-radius: 8px;
 }
 
 .button {
